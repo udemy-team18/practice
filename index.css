@@ -1,11 +1,11 @@
 *,
 *::after,
 *::before {
-  /* border: 1px solid lime; */
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -40,4 +40,28 @@ body {
   font-size: 2rem;
   margin: 0;
   padding: 0;
+}
+
+.picture {
+  width: 20%;
+  height: 200px;
+  overflow: hidden;
+  opacity: 50%;
+  box-shadow: 5px 5px 3px darkred;
+  border-radius: 10px;
+}
+.picture img {
+  width: 100%;
+  object-fit: contain;
+  margin-top: -10%;
+}
+
+.line {
+  width: 80%;
+  height: 0;
+  border: 1px solid darkred;
+}
+
+.fruit{
+    color: aliceblue;
 }
