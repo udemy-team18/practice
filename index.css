@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  /* border: 1px solid lime; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* width: 100%; */
+  /* height: 100%; */
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategray;
+  color: red;
+}
+.name {
+  color: aliceblue;
+}
+.info {
+  text-align: center;
+  color: gray;
+}
+.curious {
+  font-weight: 100;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
