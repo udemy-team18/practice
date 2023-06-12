@@ -91,7 +91,7 @@ main * {
 .info {
   /* text-align: center; */
   color: white;
-  animation: slide 30s infinite;
+  /* animation: slide 30s infinite; */
 }
 .curious {
   font-weight: 100;
