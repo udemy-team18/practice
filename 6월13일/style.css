@@ -1,0 +1,97 @@
+body {
+  left: 0px;
+  right: 0px;
+  margin: 0px;
+  padding: 0xp;
+  color: #0e7159;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 55px;
+  align-items: center;
+}
+
+.header_1st {
+  color: #0e7159;
+}
+
+.header_2nd {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.header_2nd button {
+  background-color: #0e7159;
+  color: white;
+  border: none;
+  font-size: 12px;
+  width: 90px;
+  height: 30px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  background: url(https://image.shutterstock.com/image-photo/looking-blue-modern-office-building-260nw-1495420802.jpg);
+  background-size: cover;
+  color: aliceblue;
+  opacity: 0.8;
+}
+.banner_text p {
+  font-size: 60px;
+}
+
+.main {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main_1st {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 114px;
+}
+
+.main_title {
+  font: Spoqa Han Sans Neo;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.main_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 25px;
+}
+.main_content_box {
+  width: 293px;
+}
+.main_content_box_title {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 21px;
+  color: black;
+}
+.main_content_box_content {
+  color: #6b7684;
+}
+.main_content_box_start {
+  font-weight: 700;
+}
+
+.main_contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
