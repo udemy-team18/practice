@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      nav {
+        background-color: rgb(63, 58, 58);
+        display: flex;
+        gap: 30px;
+        height: 30px;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        margin-left: 20px;
+      }
+      header {
+        color: white;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+      }
+
+      section {
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      section > div {
+        font-weight: 500;
+        text-align: center;
+      }
+      @media screen and (max-width: 760px) {
+        section {
+          background-color: black;
+          color: white;
+        }
+        header {
+          background-color: white;
+          color: black;
+          font-weight: 700;
+        }
+      }
+      footer {
+        color: white;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><div>자기 소개를 시작할게요</div></header>
+    <nav>
+      <a href="web.html">홈</a>
+      <a href="취미.html">취미</a>
+
+      <a href="블로그.html">블로그</a>
+      <a href="목표.html">목표</a>
+    </nav>
+    <section>
+      <img src="me.png" alt="me" width="170px" />
+      <h1>자기소개를 시작할게요</h1>
+      <div>
+        이전에는 운동사로서 사람들의 몸을 유지보수하여 건강 서비스를
+        제공하였습니다.
+        <br />
+        앞으로는 코드를 잘 유지보수하여 일상의 가치를 높이는 서비스를 만들어내는
+        개발자가 되고 싶습니다. <br />
+        새로운 지식을 습득하고 적용하는 과정을 좋아하고 코드가 간결해져서
+        가독성이 높아질 때 행복을 느낍니다.
+      </div>
+    </section>
+
+    <br />
+    <footer>저작권 @ 황예지</footer>
+  </body>
+</html>

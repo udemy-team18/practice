@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b6d1c3a6ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      body {
+        height: 1000vh;
+        position: absolute;
+        width: 100vw;
+      }
+      header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin: 30px 0px; */
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        z-index: 2;
+        margin-bottom: 300px;
+        top: 0;
+      }
+      .header-menu {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .header-menu > div {
+        font-weight: 700;
+      }
+
+      section {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .content_box {
+        width: 300px;
+        height: 350px;
+        transition: all 0.2s linear;
+      }
+
+      .box:hover {
+        transform: scale(1.05);
+      }
+      .content_text {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 5px;
+        width: 300px;
+      }
+      .icons {
+        opacity: 0.6;
+      }
+
+      .content_box2 {
+        opacity: 0.6;
+        font-size: 10px;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        background-color: #3b81f6;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        color: aliceblue;
+        font-weight: 700;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="icon.png" width="70px" />
+      <div class="header-menu">
+        <div>스팩소개</div>
+        <div>교육과정</div>
+        <div>공지사항</div>
+        <div>수료생 커뮤니티</div>
+        <div>협력사</div>
+        <div>스팩블로그</div>
+      </div>
+      <div>로그인</div>
+    </header>
+
+    <section>
+      <h1>교육과정</h1>
+      <div class="content">
+        <div class="box">
+          <div class="cotent_box">
+            <img src="../키카.jpeg" alt="키카" width="300px" height="150px" />
+            <h4 class="title">이거들으면 개발자 될 수 있습니다</h4>
+            <div class="content_text">
+              <div class="content_box2">
+                온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다
+                들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다
+                가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="btn">
+                <button>더 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="cotent_box">
+            <img src="../키카.jpeg" alt="키카" width="300px" height="150px" />
+            <h4 class="title">이거들으면 개발자 될 수 있습니다</h4>
+            <div class="content_text">
+              <div class="content_box2">
+                온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다
+                들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다
+                가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="btn">
+                <button>더 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="cotent_box">
+            <img src="../키카.jpeg" alt="키카" width="300px" height="150px" />
+            <h4 class="title">이거들으면 개발자 될 수 있습니다</h4>
+            <div class="content_text">
+              <div class="content_box2">
+                온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다
+                들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다
+                가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="btn">
+                <button>더 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="cotent_box">
+            <img src="../키카.jpeg" alt="키카" width="300px" height="150px" />
+            <h4 class="title">이거들으면 개발자 될 수 있습니다</h4>
+            <div class="content_text">
+              <div class="content_box2">
+                온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다
+                들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다
+                가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="btn">
+                <button>더 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="cotent_box">
+            <img src="../키카.jpeg" alt="키카" width="300px" height="150px" />
+            <h4 class="title">이거들으면 개발자 될 수 있습니다</h4>
+            <div class="content_text">
+              <div class="content_box2">
+                온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다
+                들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다
+                가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="btn">
+                <button>더 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="cotent_box">
+            <img src="../키카.jpeg" alt="키카" width="300px" height="150px" />
+            <h4 class="title">이거들으면 개발자 될 수 있습니다</h4>
+            <div class="content_text">
+              <div class="content_box2">
+                온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다
+                들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요온갖거 다
+                가르쳐줍니다 들으러 오세요온갖거 다 가르쳐줍니다 들으러 오세요
+              </div>
+              <div class="icons">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="btn">
+                <button>더 알아보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

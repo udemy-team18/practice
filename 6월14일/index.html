@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/b6d1c3a6ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container1 {
+        border: 1px solid black;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .box {
+        background-color: blue;
+        color: white;
+        padding: 10px;
+      }
+      .container2 {
+        display: flex;
+        gap: 10px;
+      }
+      .box2 {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+      .container3 {
+        margin-top: 20px;
+        background-image: url('./키카.jpeg');
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+      }
+      .container4 {
+        margin: 20px;
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(to bottom right, red, blue);
+        border-radius: 50%;
+      }
+      .first-box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .second-box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        z-index: -1;
+      }
+      /* .container5 :hover {
+display: ;
+      } */
+      .container5-content {
+        display: none;
+      }
+      .container6 {
+        display: flex;
+        margin: 20px;
+        gap: 10px;
+      }
+      .container6 > div {
+        border: 1px solid black;
+        color: white;
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+      }
+      .pagenation :hover {
+        background-color: lightblue;
+        color: black;
+      }
+      @media screen and (max-width: 760px) {
+        .query {
+          background-color: tomato;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="box">아이템1</div>
+      <div class="box">아이템2</div>
+      <div class="box">아이템3</div>
+    </div>
+    <div class="container2">
+      <div class="box2">아이템1</div>
+      <div class="box2">아이템2</div>
+      <div class="box2">아이템3</div>
+      <div class="box2">아이템4</div>
+    </div>
+    <div class="container3"></div>
+    <div class="container4"></div>
+    <div class="first-box">
+      box1
+      <div class="second-box">box2</div>
+    </div>
+    <div class="container5">
+      <span class="container5-title">메뉴</span>
+      <div class="container5-content">
+        <p>항목1</p>
+        <p>항목2</p>
+        <p>항목3</p>
+        <p>항목4</p>
+      </div>
+    </div>
+    <i class="fas fa-user-graduate"></i>
+    <i class="fas fa-wind"></i>
+    <div>이 div 요소의 위치는 정적입니다</div>
+    <div class="container6">
+      <div class="pagenation1">1</div>
+      <div class="pagenation2">2</div>
+      <div class="pagenation3">3</div>
+      <div class="pagenation4">4</div>
+    </div>
+    <div class="query">화면 너비가 760px 이하일 때 색상이 변경됩니다</div>
+  </body>
+</html>
