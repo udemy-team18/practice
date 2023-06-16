@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>계산기</h1>
+    <div class="cal">
+      <div>num1: <input type="number" id="number1" /></div>
+      <div>num2: <input type="number" id="number2" /></div>
+      <div>result: <span id="result"></span></div>
+      <br />
+      <br />
+
+      <button id="sum" onclick="add()">+</button>
+      <button onclick="sub()">-</button>
+      <button onclick="multi()">*</button>
+      <button onclick="division()">/</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
