@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .time {
+        text-transform: uppercase;
+        font-size: 8rem;
+      }
+      #time {
+        font-weight: bolder;
+        font-size: 3rem;
+        color: darkred;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="time">time</h1>
+    <p id="time">time is running out</p>
+    <script>
+      //   let display = document.querySelector("#time");
+      //   const time = new Date();
+      //   console.log(time);
+      //   console.log(time.getFullYear());
+      //   console.log(time.getMonth());
+      //   console.log(time.getDate());
+      //   console.log(time.getDay());
+      //   console.log(time.getHours());
+      //   console.log(time.getMinutes());
+      //   console.log(time.getSeconds());
+      //   time.innerHTML = time();
+      function timeHandler() {
+        let display = document.querySelector("#time");
+        const time = new Date();
+        const year = time.getFullYear();
+        const month = time.getMonth() + 1;
+        const date = time.getDate();
+        // const day = time.getDay();
+        const hour = time.getHours() + 1;
+        const minutes = time.getMinutes() + 1;
+        const seconds = time.getSeconds() + 1;
+        display.innerHTML = `${year}년 ${month}월 ${date}일 ${hour}시 ${minutes}분 ${seconds}초`;
+      }
+
+      setInterval(timeHandler, 1000);
+    </script>
+  </body>
+</html>
