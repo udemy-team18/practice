@@ -21,4 +21,4 @@ console.log(name3);
 // wrapper.innerHTML = person.firstName + name1 + name2;
 
 name1.innerHTML = person.firstName;
-name3.innerHTML = person.firstName;
+name3.innerHTML = person.firstName
