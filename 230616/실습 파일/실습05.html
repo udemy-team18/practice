@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 갤러리</title>
+    <style>
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 10px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <img src="assets/04.jpg" alt="Image 1" />
+      <img src="assets/05.jpg" alt="Image 2" />
+      <img src="assets/06.jpg" alt="Image 3" />
+    </div>
+  </body>
+  <script>
+    const gallery = document.querySelector(".gallery");
+    const images = gallery.getElementsByTagName("img");
+
+    for (let i = 0; i < images.length; i++) {
+      images[i].addEventListener("click", () => {
+        // 클릭된 이미지에 대한 동작 추가
+        console.log(`이미지 ${i + 1}이 클릭되었습니다.`);
+      });
+    }
+  </script>
+</html>

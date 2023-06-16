@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        list-style: none;
+        box-sizing: border-box;
+      }
+      /* .slider {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      } */
+    </style>
+    <title>slider</title>
+  </head>
+  <body>
+    <!-- <ul class="slider">
+      <li><img src="images/1.jpg" alt="" /></li>
+      <li><img src="images/2.jpg" alt="" /></li>
+      <li><img src="images/3.jpg" alt="" /></li>
+      <li><img src="images/4.jpg" alt="" /></li>
+      <li><img src="images/5.jpg" alt="" /></li>
+    </ul> -->
+    <div class="banner">
+      <img id="img" src="./images/1.jpg" alt="img" />
+    </div>
+    <button onclick="fore()">fore</button>
+    <button onclick="next()">next</button>
+    <script>
+      let currIndex = 0;
+
+      function fore() {
+        const img = document.querySelector("#img");
+        // console.log(img, typeof img, img.key, img.value);
+        const imgList = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+        let currIndex = 0;
+        if (currIndex <= 0) {
+        } else {
+          currIndex -= 1;
+        }
+        img.src = `./images/${imgList[currIndex]}`;
+      }
+
+      function next() {
+        const img = document.querySelector("#img");
+        // console.log(img, typeof img, img.key, img.value);
+        const imgList = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+        if (currIndex <= imgList.length) {
+          currIndex += 1;
+        } else {
+          currIndex = imgList.length;
+        }
+        img.src = `./images/${imgList[currIndex]}`;
+      }
+    </script>
+  </body>
+</html>

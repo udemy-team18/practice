@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>이미지 랜덤 변환</title>
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="randomImage" src="assets/01.jpg" alt="이미지" />
+
+    <script>
+      const images = [
+        "assets/01.jpg",
+        "assets/02.jpg",
+        "assets/03.jpg",
+        "assets/04.jpg",
+        "assets/05.jpg",
+      ];
+
+      function getRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImage = images[randomIndex];
+        document.getElementById("randomImage").src = randomImage;
+      }
+
+      document
+        .getElementById("randomImage")
+        .addEventListener("click", getRandomImage);
+    </script>
+  </body>
+</html>
