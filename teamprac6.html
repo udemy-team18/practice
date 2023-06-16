@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>현재 시간</h1>
+    <div id = 'time'></div>
+</body>
+<script>
+    function getTime(){
+        const date = new Date();
+        const clock = document.getElementById('time')
+        clock.innerText = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
+    }
+
+    getTime();
+    setInterval(getTime,1000);
+    
+</script>
+</html>

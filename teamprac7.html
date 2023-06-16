@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class = 's' onclick = 'before()'>이전</button>
+    <img class = 'i' id = 'img'></img>
+    <button class = 's' onclick = 'after()'>다음</button>
+</body>
+<style>
+    body{
+        display : flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        
+    }
+
+    .s{
+        margin-top : 230px;
+        box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+
+
+    }
+
+    .s:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+   .s:active {
+	position:relative;
+	top:1px;
+}
+    
+    .i{
+        width : 200px;
+        height : 200px;
+        border-radius : 10px;
+        
+    }
+</style>
+<script>
+
+    let arr = ['https://newsimg.sedaily.com/2023/01/02/29KBIDNQRV_1.jpg','https://images.khan.co.kr/article/2023/02/23/news-p.v1.20230223.1772810813544b31821a81e6efbb4887_P1.jpg',
+    'https://dimg.donga.com/ugc/CDB/WEEKLY/Article/5f/22/2d/58/5f222d580749d2738de6.jpg','https://img.seoul.co.kr/img/upload/2021/07/02/SSI_20210702145200_O2.jpg','https://img.hankyung.com/photo/201811/01.18271154.1.jpg',
+    'https://image.ytn.co.kr/general/jpg/2022/0609/202206091119486599_d.jpg','https://image.chosun.com/sitedata/image/202205/03/2022050300459_0.jpg','https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/123/935adaaf4e926848105d15be6e97985c_res.jpeg'];
+
+
+    
+  let a= document.getElementById('img');
+
+  a.src = arr[0];
+    
+  let i=0;
+
+    function before(){
+
+    
+
+    if(i!== 0){
+        i--;
+        a.src = arr[i]
+    }
+    else{
+        a.src = arr[i];
+    }        
+        
+    }
+
+    function after(){
+        
+        
+    if(i!==arr.length-1){
+        i++;
+       a.src= arr[i]
+    }
+        
+    else {
+        a.src = arr[i]
+    }    
+    }
+    
+</script>
+</html>
