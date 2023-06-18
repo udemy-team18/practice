@@ -24,10 +24,18 @@ header .button button {
 
 .section1 {
   padding: 15rem;
-  background-image: url(/0616/img/background.svg);
+  background-image: url(/0616/img/back.png);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.section1 .background {
+  background: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .section1 h1 {
   color: white;
@@ -337,4 +345,49 @@ header .button button {
   color: gray;
   font-size: 18px;
   width: 560px;
+}
+.section4 .section4-2 .button {
+  border: none;
+  color: #0E7159;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+.section5 {
+  padding: 12rem;
+  background-color: #0E7159;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section5 h1 {
+  font-size: 60px;
+}
+.section5 button {
+  border: none;
+  background-color: white;
+  color: #0E7159;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px;
+  margin-top: 5rem;
+}
+
+footer {
+  padding: 2rem 20rem;
+}
+footer h1 {
+  font-size: 16px;
+  font-weight: 700;
+}
+footer .footer-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: gray;
+  margin-top: 2rem;
 }
