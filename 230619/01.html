@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        background-color: darkslategray;
+        color: aliceblue;
+        text-align: center;
+      }
+      #greeting {
+        color: red;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <title>practice01</title>
+  </head>
+  <body>
+    <h1 id="greeting">hello</h1>
+
+    <script>
+      let name = "안승지";
+      let age = 29;
+      document.write(name, "<br>");
+      document.write(age, "<br>");
+      console.log(name);
+      console.log(age);
+
+      document.getElementById("greeting").innerText = `hello, ${name}`;
+
+      let a = 20;
+      let b = 10;
+      let c = 30;
+
+      document.write("a===", a, "<br>");
+      document.write("b===", b, "<br>");
+      document.write("c===", c, "<br>");
+      document.write("a+b===", a + b, "<br>");
+      document.write("a-b===", a - b, "<br>");
+      document.write("a*b===", a * b, "<br>");
+      document.write("a/b===", a / b, "<br>");
+      document.write("a%b===", a % b, "<br>");
+
+      const asj = "seung ji";
+      const wannabe = "frontEnd Designer";
+      document.write(asj, "<br>");
+      document.write(wannabe, "<br>");
+      document.write(wannabe[2], "<br>");
+      document.write(wannabe[3], "<br>");
+
+      //   name = prompt("what's your name?");
+      //   age = prompt("hows about age?");
+      document.write(name, "<br>");
+      document.write(age, "<br>");
+
+      let x = 10;
+      document.write(x, "<br>");
+      ++x;
+      document.write(x, "<br>");
+      x++;
+      document.write(x, "<br>");
+
+      document.write(typeof age, "<br>");
+      document.write(typeof name, "<br>");
+
+      let y = 30;
+      let z = "20";
+      document.write("x", x, "<br>");
+      document.write("y", y, "<br>");
+      document.write("z", z, "<br>");
+      document.write("x > y : ", x > y, "<br>");
+      document.write("x < y : ", x < y, "<br>");
+      document.write("x >= y : ", x > y, "<br>");
+      document.write("x <= y : ", x < y, "<br>");
+      document.write("x == z : ", x == z, "<br>");
+      document.write("x === z : ", x == z, "<br>");
+
+      //   let first = 4;
+      //   let last = 5;
+      //   let result = undefined;
+
+      //   if (first > 3) {
+      //     if (first < 5) {
+      //       return (result = first + last);
+      //     }
+      //   } else {
+      //     return (result = first * last);
+      //   }
+      //   console.log(result);
+    </script>
+  </body>
+</html>
