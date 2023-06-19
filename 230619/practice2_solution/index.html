@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실시간 채팅</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>실시간 채팅</h1>
+    </header>
+    <main>
+      <div class="chat">
+        <div class="message">
+          <span class="user">User1:</span>
+          <span class="content">안녕하세요!</span>
+        </div>
+        <div class="message">
+          <span class="user">User2:</span>
+          <span class="content">반갑습니다!</span>
+        </div>
+      </div>
+      <form id="message-form">
+        <input type="text" id="user-input" placeholder="사용자명" />
+        <input
+          type="text"
+          id="message-input"
+          placeholder="메시지를 입력하세요"
+        />
+        <button type="submit">전송</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

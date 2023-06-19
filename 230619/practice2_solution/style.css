@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #009688;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.chat {
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 5px;
+}
+
+.user {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#message-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+#message-form input[type="text"] {
+  margin-right: 5px;
+}
+
+#message-form button {
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
