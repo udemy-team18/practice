@@ -120,8 +120,57 @@
 
       document.write("fruits_push : ", fruits.push(fruits_pop), "<br>");
       document.write("fruits : ", fruits, "<br>");
-      
-      
+
+      const strings = ["Hello", " ", "World", "!"];
+      console.log(strings);
+      //   console.log(strings.concat());
+      //   console.log(strings.toString());
+      console.log(strings.concat().join(""));
+
+      let randomString = "ahsdlfkjhsadlfkjhdaslkfh";
+      document.write(randomString.startsWith("sadfadsf"), "<br>");
+      document.write(randomString.endsWith("lkfh"), "<br>");
+
+      //   let score = prompt("Enter your score");
+      let score = 100;
+      let money = 0;
+      if (score > 90) {
+        console.log("good");
+      } else if (score > 80) {
+        console.log("not bad");
+      } else if (score > 70) {
+        console.log("soso");
+      } else if (score < 60) {
+        console.log("bad");
+      }
+
+      //   let ranNum = prompt('input random number');
+      score > 90
+        ? (money += 10000)
+        : score > 80
+        ? (money += 5000)
+        : score > 70
+        ? (money += 1000)
+        : score < 60
+        ? (money -= 10000)
+        : (money = 0);
+      console.log(money);
+
+      switch (new Date().getDay()) {
+        case 0:
+          console.log("sunday");
+          break;
+        case 1:
+          console.log("monday");
+          break;
+        default:
+          console.log(`working...`);
+      }
+    // 중첩 반복문을 이용한 구구단 출력 예제
+    // forEach()
+    // map()
+    // 생성자 함수 예제
+    // 비동기 개념과 callback 함수 사용 예시
     </script>
   </body>
 </html>
