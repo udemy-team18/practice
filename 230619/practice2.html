@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .chat_content {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+    <title>practice2</title>
+  </head>
+  <body>
+    <h1>live chatting</h1>
+    <ul class="chat_wrap">
+      <li class="chat">
+        <ul class="chat_content">
+          <li class="name">asj</li>
+          <li class="message">example</li>
+        </ul>
+      </li>
+    </ul>
+    <input type="text" placeholder="user name" id="user_name" />
+    <input type="text" placeholder="message" id="user_message" />
+    <button type="submit" id="submit_btn">send</button>
+    <script>
+      const submitBtn = document.getElementById("submit_btn");
+      submitBtn.onclick = function (name, message) {
+        name = document.getElementById("user_name").value;
+        message = document.getElementById("user_message").value;
+        // console.log(name, message);
+
+        // const chatWrap = document.getElementsByClassName("chat_wrap");
+        const ul = document.createElement("ul");
+        ul.classList.add("chat_content");
+        const li1 = document.createElement("li");
+        li1.classList.add("chat");
+        const li2 = document.createElement("li");
+        li2.classList.add("name");
+        const li3 = document.createElement("li");
+        li3.classList.add("message");
+        const chatWrap = document.querySelector(".chat_wrap");
+        const chat = chatWrap.appendChild(li1);
+        const innerChat = chat.appendChild(ul);
+        const chatName = innerChat.appendChild(li2);
+        const chatMessage = innerChat.appendChild(li3);
+        // chatName.innerHTML = `${name} : ${message}`;
+        chatName.innerHTML = name + ":";
+        chatMessage.innerHTML = message;
+        // innerChat.appendChild(li).innerHTML = message;
+      };
+    </script>
+  </body>
+</html>
