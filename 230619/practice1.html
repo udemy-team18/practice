@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon">
-    <style>
-
-    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
+    <style></style>
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="product">상품1</div>
+        <div class="price">1000</div>
+        <button class="to_cart" onclick="toCart()">장바구니에 추가</button>
+      </li>
+      <li>
+        <div class="product">상품2</div>
+        <div class="price">2000</div>
+        <button class="to_cart" onclick="toCart()">장바구니에 추가</button>
+      </li>
+      <li>
+        <div class="product">상품3</div>
+        <div class="price">3000</div>
+        <button class="to_cart" onclick="toCart()">장바구니에 추가</button>
+      </li>
+    </ul>
+    <div class="cart_wrapper">
+      <ul class="cart">
+        <!-- <li class="cart_item">
+          <div class="product_name"></div>
+          <div class="product_price"></div>
+        </li> -->
+      </ul>
+    </div>
     <script>
-        
+      function toCart() {
+        const product = this.document.querySelector(".product").innerHTML;
+        const price = this.document.querySelector(".price").innerHTML;
+        // console.log(product, price);
+        const cart = document.querySelector(".cart");
+        const cartItem = document.createElement("li");
+        const productName = document.createElement("div");
+        const productPrice = document.createElement("div");
+        cartItem.classList.add("cart_item");
+        productName.classList.add("product_name");
+        productPrice.classList.add("product_price");
+        productName.innerHTML = product;
+        productPrice.innerHTML = price;
+        // let write_product = document.createTextNode("product");
+        // let write_price = document.createTextNode("price");
+
+        cart.appendChild(cartItem);
+        cartItem.appendChild(productName);
+        cartItem.appendChild(productPrice);
+      }
     </script>
-</body>
+  </body>
 </html>
