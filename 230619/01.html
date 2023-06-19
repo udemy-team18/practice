@@ -98,6 +98,30 @@
         x % 3 == 0 || x % 5 == 0,
         "<br>"
       );
+
+      let seungJi = {
+        name: "seung ji an",
+        age: 29,
+        height: 178,
+        weight: 88,
+        job: undefined,
+        education: { college: "DKU FMD", bootCamp: "likeLion FES4" },
+      };
+      asj.belong = "team18";
+
+      document.write(`이름 : ${seungJi.name} <br>`);
+      document.write(`나이 : ${seungJi.age} <br>`);
+      document.write(`이름은 ${seungJi["name"]} <br>`);
+
+      let fruits = ["apple", "banaba", "lich", "pear", "peach"];
+      let fruits_pop = fruits.pop();
+      document.write("fruits_pop : ", fruits_pop, "<br>");
+      document.write("fruits : ", fruits, "<br>");
+
+      document.write("fruits_push : ", fruits.push(fruits_pop), "<br>");
+      document.write("fruits : ", fruits, "<br>");
+      
+      
     </script>
   </body>
 </html>
