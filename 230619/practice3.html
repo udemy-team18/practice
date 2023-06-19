@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
     <title>practice2</title>
-</head>
-<body>
+  </head>
+  <body>
+    <form id="input">
+      <input type="text" id="jobs_to_be_done" placeholder="jobs_to_be_done" />
+      <button type="submit">add</button>
+    </form>
+    <ul class="list">
+      <li class="work_wrap">
+        <div class="work"></div>
+        <button>delete</button>
+      </li>
+    </ul>
     <script>
+      const input = document.getElementById("input");
+      const jobs_to_be_done = document.getElementById("jobs_to_be_done");
+
+      input.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const job = jobs_to_be_done.value;
+        if (job == "") {
+          alert("할 일을 입력해주세요!");
+        } else {
+          addJob(job);
+          jobs_to_be_done.value = "";
+        }
+      });
+      function addJob(job){
         
+      }
     </script>
-</body>
+  </body>
 </html>
