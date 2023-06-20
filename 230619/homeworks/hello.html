@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/04c1ea1f1c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link
+      href="
+https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        font-family: "Roboto", sans-serif;
+        width: 100vw;
+        height: 100vh;
+        background-color: dimgrey;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+    </style>
+
+    <title>hello To User</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- <h1 class="first_name">first name</h1> -->
+      <!-- <h1 class="last_name">last name</h1> -->
+    </div>
+    <script>
+      function write() {
+        const first_name = prompt("당신의 성은 무엇인가요?");
+        const last_name = prompt("당신의 이름은 무엇인가요?");
+
+        const wrapper = document.getElementById("wrapper");
+        const write_name = document.createElement("h1");
+        wrapper.appendChild(write_name);
+        write_name.textContent = `안녕하세요, ${first_name}${last_name}님`;
+      }
+
+      write();
+    </script>
+  </body>
+</html>

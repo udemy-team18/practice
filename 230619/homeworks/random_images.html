@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <title>random images</title>
+  </head>
+  <body>
+    <div class="main">
+      <img
+        id="banner"
+        src="./images/1.jpg"
+        alt="랜덤이미지 5개중 1개"
+        srcset=""
+      />
+      <button id="change">change 1/5</button>
+    </div>
+    <script>
+      const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+      const banner = document.querySelector("#banner");
+      const change = document.querySelector("#change");
+
+      function changeImagesHandler() {
+        const mainVisual = images[Math.floor(Math.random() * images.length)];
+        // console.log(Math.floor(Math.random() * images.length));
+        banner.src = `images/${mainVisual}`;
+      }
+
+      change.addEventListener("click", changeImagesHandler);
+    </script>
+  </body>
+</html>
