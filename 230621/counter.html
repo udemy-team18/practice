@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: darkgray;
+        color: red;
+      }
+    </style>
+    <title>counter_js</title>
+  </head>
+  <body>
+    <div class="JS">
+      <h1 id="counter">0</h1>
+      <div class="button_wrap">
+        <button id="plus">+1</button>
+        <button id="minus">-1</button>
+      </div>
+    </div>
+
+    <div class="React">
+      <div id="root"></div>
+    </div>
+
+    <script>
+      const counterJS = document.querySelector("#counter");
+      const plus = document.querySelector("#plus");
+      const minus = document.querySelector("#minus");
+
+      function counter_plus() {
+        console.log(counter, typeof counter);
+        const current = parseInt(counter.innerText);
+        counter.innerText = current + 1;
+      }
+      counter_minus = () => {
+        console.log(counter, typeof counter);
+        const current = parseInt(counter.innerText);
+        counter.innerText = current - 1;
+      };
+
+      plus.addEventListener("click", counter_plus);
+      minus.addEventListener("click", counter_minus);
+    </script>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function CounterReact() {
+        const [count, setCount] = React.useState(0);
+        return (
+          <div>
+            <h1>{count}</h1>
+            <button
+              onclick={() => {
+                setCount(count + 1);
+              }}
+            >
+              +1
+            </button>
+            <button
+              onclick={() => {
+                setCount(count - 1);
+              }}
+            >
+              -1
+            </button>
+          </div>
+        );
+        // return React.createElement(result);
+      }
+      //   ReactDOM.render(<CounterReact />, root);
+      ReactDOM.render(React.createElement(CounterReact), root);
+    </script>
+  </body>
+</html>

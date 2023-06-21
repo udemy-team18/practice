@@ -14,11 +14,11 @@
     <!-- <script> -->
     <script type="text/babel">
       document.getElementById("root");
-      function MyComp() {
-        return React.createElement("h1", null, "함수형 컴포넌트 MyComp");
+      function Hello(props) {
+        return React.createElement("h1", null, `Hello, ${props.name}`);
       }
-      // ReactDOM.render(React.createElement(myComp),root);
-      ReactDOM.render(<MyComp />, root);
+      // ReactDOM.render(<Hello name={"ASJ"} />, root);
+      ReactDOM.render(React.createElement(Hello, { name: "안승지" }), root);
     </script>
   </body>
 </html>
