@@ -60,6 +60,9 @@ function addTodoList(todo) {
   const buttonTag = document.createElement("button");
   liTag.textContent = `${todo}`;
   buttonTag.textContent = "삭제";
+  buttonTag.addEventListener("click", () => {
+    liTag.remove(); // 할일 목록(li) 제거
+  });
   liTag.append(buttonTag);
   todoList.appendChild(liTag);
 }

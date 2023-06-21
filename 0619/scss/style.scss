@@ -128,4 +128,23 @@
     width: 100%;
     text-align: center;
   }
+
+  .wrapper-todoList{
+    margin-left: 2rem;
+
+    input, li{
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      list-style: none;
+    }
+
+    button{
+      background-color: rgb(248, 162, 130);
+      border-radius: 5px;
+      border: 1px solid;
+      padding: .3rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+  }
 }
