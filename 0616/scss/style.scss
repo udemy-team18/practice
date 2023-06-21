@@ -25,18 +25,12 @@ header {
 
 .section1 {
   padding: 15rem;
-  background-image: url(/0616/img/back.png);
-  position: relative;
+  background: rgba(0, 0, 0, 0.7) url(/0616/img/back.png);
+  background-size:cover;
   display: flex;
+  background-blend-mode: darken;
   flex-direction: column;
   align-items: center;
-  .background{
-    background: black;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
 
   h1{
     color: white;
@@ -374,6 +368,7 @@ header {
         border-radius: 10px;
         background-color: #F2F3F4;
         padding: 3rem 3rem;
+        animation: slide 10s linear infinite;
 
         .profile{
           display: flex;
@@ -451,5 +446,15 @@ footer{
     color: gray;
     margin-top: 2rem;
 
+  }
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }

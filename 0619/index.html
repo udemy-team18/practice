@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="greeting">hello</h1>
+  <!-- <button id="btn" type="button" onclick="test(event)">클릭</button> -->
+  <button id="btn" type="button" onclick="startCon">클릭</button>
+  <input id="hello" type="text" onchange="onChange">
+  <p class="demo"></p>
+  <script>
+    let name = "홍길동"
+    let age = 25
+    age = 40
+
+    document.write(name);
+    document.write(age);
+
+    console.log(name);
+    console.log(age);
+
+    document.getElementById("greeting").innerText = "javascript"
+
+    // let a = 20;
+    // let b = 10;
+    let c = 2;
+
+    // document.write("a===", a);
+
+    const name1 = "gil dong"
+    const belong = 'udemy x spac'
+    document.write(name1, '<br>');
+    document.write(belong, '<br>');
+    document.write(belong[2], '<br>');
+    document.write(belong[3], '<br>');
+
+    // let name2 = prompt('이름을 입력하세요');
+    // console.log(name2);
+
+    let x, y, z;
+    x = 5;
+    y = 10;
+    z = 7;
+    z++;
+    --z;
+    document.write('z===', z);
+    console.log(typeof z);
+
+    document.write('x > y : ', x>y, '<br>');
+    document.write(`x == z : ${x === z}`);
+    document.write(`true || false : ${true || false} <br>`);
+
+    let a = 4
+    let b = 20
+    document.write(`${(a > 3 && a < 5) ? a+b : a*b}`);
+    document.write(`${(a === 4 || b === 10) ? a*b : 'no'}`);
+    document.write(`${(a === 4 && b === 20) ? a*b : a%b }`);
+
+
+    function circleWidth(r){
+      let width  = r*r*3.14;
+      return width
+    }
+    document.write(circleWidth(10));
+
+    function test(e){
+      console.log(e.target);
+      document.write('hello');
+    }
+
+    const btn = document.getElementById("btn");
+    const hello = document.getElementById("hello");
+
+    function startCon(){
+      console.log('it works');
+    }
+
+    btn.addEventListener("click", startCon);
+    hello.onChange = function (){
+      let hello1 = hello.value;
+      console.log(hello1);
+    };
+
+    //객체
+    let person = {
+      name : 'kim',
+      age : 200,
+      height : 170,
+      weight : 70,
+      career: {first : "army", second : "safeHomes"}
+    };
+    person.belong = "세이프홈즈"
+
+    document.write(`제 이름은 ${person.name}입니다`);
+    document.write(`제 이름은 ${person['name']}입니다`);
+    
+    //pop, push
+    let fruits = ['apple', 'banana', 'peach']
+    document.write(`과일 : ${fruits} <br>`);
+    let pop = fruits.pop();
+    document.write(pop);
+    document.write(`과일 : ${fruits} <br>`);
+    document.write(fruits.push(pop))
+    document.write(`과일 : ${fruits} <br>`);
+
+    const strings = ['hello', ' ', 'world', '!'];
+
+    // 문자열 합치기
+    function con(strings){
+      const s1 = strings[0];
+      console.log(s1.concat(strings[1],strings[2],strings[3]));
+    }
+    con(strings);
+
+    function jo(strings){
+      console.log(strings.join(''));
+    }
+    jo(strings);
+
+    let txt = 'asdf';
+    document.write(txt.includes('as'), '<br>');
+    document.write(txt.includes('As'), '<br>');
+    document.write(txt.startsWith('s'), '<br>');
+    document.write(txt.endsWith('f'), '<br>');
+
+    // let score = prompt("score = ");
+    let score = 88;
+    let money = 0;
+    if (score > 90) {
+      document.write('very good <br>');
+      money += 10000;
+    } else if (score > 80) {
+      document.write('good <br>');
+      money += 5000;
+    } else if (score > 70){
+      document.write('not bad <br>');
+      money += 1000;
+    } else {
+      money = 0;
+    }
+    document.write(money);
+
+    //삼항연산자
+    score > 90 ? money += 10000 :
+      score > 80 ? money += 5000 :
+        score > 70 ? money += 1000 : money = 0;
+
+    let day = new Date().getDay();
+    let date = new Date().getDate();
+    let year = new Date().getFullYear();
+    console.log(day, date, year);
+
+    switch (new Date().getDay()){
+      case 0 :
+        document.write('일요일');
+        break;
+      case 1 :
+        document.write('월요일');
+        break;
+      case 2 :
+        document.write('화요일');
+        break;
+      case 3 :
+        document.write('수요일');
+        break;
+      case 4 :
+        document.write('목요일');
+        break;
+      case 5 :
+        document.write('금요일');
+        break;  
+      case 6 :
+        document.write('토요일');
+        break;
+    }
+
+    //구구단
+    for (let i = 2; i < 10; i++){
+      for (let j = 1; j < 10; j++){
+        console.log (`${i} X ${j} = ${i*j}`);
+      }
+    }
+
+    let arr = [1,2,3,4,5,6,7,8,9];
+    arr.forEach((i)=> 
+      arr.forEach((j)=>
+      console.log(`${i}X${j}=${i*j}`)
+    ));
+
+    const numbers = [1,2,3,4,5];
+    const num = numbers.map(function (number){
+      return number ** 2;
+    });
+    console.log(num);
+
+    function Person(first, last, age){
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+    }
+    const father = new Person('cheol', 'kim', 60);
+    const mom = new Person('eunyoung', 'song', 55);
+
+    function display(value){
+      document.getElementById("demo").innerHTML = value
+    }
+
+    function first(){
+      display('hello');
+    }
+    function second(){
+      display('goodbye');
+    }
+
+    second();
+    first();
+
+  </script>
+</body>
+</html>

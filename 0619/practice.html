@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- 장바구니 -->
+  <section class="container-cart">
+    <header>온라인 상점</header>
+    <div class="fruits">
+      <div class="fruits-box-1">
+        <h1 class="title">사과</h1>
+        <p class="price">1000원</p>
+        <button class="button" id="apple" onclick="">장바구니에 추가</button>
+      </div>
+      <div class="fruits-box-2">
+        <h1 class="title">바나나</h1>
+        <p class="price">1500원</p>
+        <button class="button" id="banana">장바구니에 추가</button>
+      </div>
+    </div>
+    <div class="list">
+      <h1>장바구니🛒</h1>
+      <div id="fruits-list"></div>
+    </div>
+  </section>
+
+  <!-- 실시간 채팅 -->
+  <section class="container-chat">
+    <header class="chat">실시간 채팅</header>
+    <div class="wrapper-chat">
+      <div id="chatPage"></div>
+      <input type="text" id="user" placeholder="사용자명">
+      <input type="text" id="message" placeholder="메시지를 입력하세요">
+      <button id="button" ">전송</button>
+    </div>
+  </section>
+
+  <!-- Todo list -->
+  <section class="container-todoList">
+    <header>Todo List</header>
+    <div class="wrapper-todoList">
+      <input type="text" id="todo" placeholder="할 일을 입력하세요">
+      <button id="addButton">추가</button>
+      <div class="todoList"></div>
+    </div>
+  </section>
+</body>
+</html>

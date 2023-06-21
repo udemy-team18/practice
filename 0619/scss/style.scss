@@ -1,0 +1,131 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+// 온라인 상점
+.container-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  header {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: rgb(234, 232, 232);
+    padding: 1rem 8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .fruits{
+    display: flex;
+
+    .fruits-box-1{
+      background-color: rgb(243, 157, 157);
+      margin-right: 2rem;
+    }
+
+    .fruits-box-2{
+      background-color: rgb(239, 239, 160);
+    }
+    
+    .fruits-box-1, .fruits-box-2{
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .button{
+        padding: .1rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: white;
+      }
+    }
+  }
+
+  .list {
+
+    h1{
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    #fruits-list{
+      display: flex;
+      flex-direction: column;
+
+      li{
+        list-style: none;
+      }
+    }
+  }
+}
+
+// 실시간 채팅
+.container-chat{
+  margin-bottom: 6rem;
+
+  .chat{
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: rgb(234, 232, 232);
+    padding: 1rem 8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+  }
+  .wrapper-chat{
+    margin-left: 1rem;
+  }
+
+  #chatPage {
+    #userName{
+      font-weight: 700;
+    }
+    li {
+      // display: flex;
+      // flex-direction: row;
+      list-style: none;
+      font-size: 1.5rem;
+    }
+  }
+
+  input{
+    font-size: 1.5rem;
+  }
+
+  button{
+    background-color: rgb(248, 162, 130);
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+}
+
+//Todo List
+.container-todoList{
+  margin-bottom: 6rem;
+  
+  header {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: rgb(234, 232, 232);
+    padding: 1rem 8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+}
