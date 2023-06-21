@@ -8,6 +8,11 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
     <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
       body {
         display: flex;
         flex-direction: column;
@@ -60,28 +65,30 @@
       function CounterReact() {
         const [count, setCount] = React.useState(0);
         return (
-          <div>
+          <>
             <h1>{count}</h1>
-            <button
-              onclick={() => {
-                setCount(count + 1);
-              }}
-            >
-              +1
-            </button>
-            <button
-              onclick={() => {
-                setCount(count - 1);
-              }}
-            >
-              -1
-            </button>
-          </div>
+            <div class="button_wrap">
+              <button
+                onClick={() => {
+                  setCount(count + 1);
+                }}
+              >
+                +1
+              </button>
+              <button
+                onClick={() => {
+                  setCount(count - 1);
+                }}
+              >
+                -1
+              </button>
+            </div>
+          </>
         );
         // return React.createElement(result);
       }
-      //   ReactDOM.render(<CounterReact />, root);
-      ReactDOM.render(React.createElement(CounterReact), root);
+      ReactDOM.render(<CounterReact />, root);
+      //   ReactDOM.render(React.createElement(CounterReact), root);
     </script>
   </body>
 </html>
