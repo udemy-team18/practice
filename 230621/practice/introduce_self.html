@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/pill.png" type="image/x-icon" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style></style>
+    <title>seungji An</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function Write() {
+        return (
+          <div>
+            <h1>안녕하세요, 저는 *** 입니다.</h1>
+            <h2>소개</h2>
+            <p>
+              안녕하세요! 저는 [직업/전공]으로 일하고 있는 [이름]입니다. [간단한
+              소개 문구]
+            </p>
+
+            <h2>경력</h2>
+            <ul>
+              <li>
+                [회사/기관 이름]에서 [직무/역할]으로 근무한 경력이 있습니다.
+              </li>
+              <li>
+                [회사/기관 이름]에서 [직무/역할]으로 근무한 경력이 있습니다.
+              </li>
+              <li>
+                [회사/기관 이름]에서 [직무/역할]으로 근무한 경력이 있습니다.
+              </li>
+            </ul>
+
+            <h2>보유 기술</h2>
+            <ul>
+              <li>[기술/언어 1]</li>
+              <li>[기술/언어 2]</li>
+              <li>[기술/언어 3]</li>
+            </ul>
+
+            <h2>연락처</h2>
+            <p>Email: [이메일 주소]</p>
+            <p>Phone: [전화번호]</p>
+          </div>
+        );
+      }
+      //   ReactDOM.render(<Write />, root);
+      ReactDOM.render(React.createElement(Write), root);
+    </script>
+  </body>
+</html>
