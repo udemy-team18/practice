@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
 
-
-    
     <title>weatherAPI</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1 id="weather"></h1>
+    <script>
+      const weather = document.getElementById("weather");
+      const apiKey = "f3d1e839cdd3f24b6308e59b8df2077b";
+
+      function getWeather(lat, lon) {
+        console.log(lat, lon);
+        // console.log(apiKey);
+        fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (json) {
+            console.log(json);
+            const temp = json.main.temp;
+            const humidity = json.main.humidity;
+            weather.innerText = `${temp} / ${humidity}`;
+          });
+      }
+
+      function handleGeoSuccess(position) {
+        // console.log(position);
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        getWeather(latitude, longitude);
+      }
+      function handleGeoError() {
+        console.log("error");
+      }
+
+      function init() {
+        navigator.geolocation.getCurrentPosition(
+          handleGeoSuccess,
+          handleGeoError
+        );
+      }
+
+      init();
+    </script>
+  </body>
 </html>
