@@ -140,103 +140,17 @@ function todo() {
 todo();
 
 //날씨
-// const weather = document.querySelector(".weather");
-// const API_KEY = "f8d4a48d6bd796048c19751bc6d022a6";
+import API_KEY from "./api.js";
 
-// function getWeather(lat, lon) {
-//   fetch(
-//     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-//   )
-//     .then((res) => res.json())
-//     .then((data) => {
-//       const temp = data.main.temp;
-//       const weathers = data.weather[data.weather.length - 1];
-//       weatherIcon.src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
-//       weatherSpan.innerHTML = `${temp}&#176;C ${weathers.main}`;
-//     });
-// }
-
-// function handleGeoSucc(position) {
-//   console.log(position);
-//   const latitude = position.coords.latitude; // 경도
-//   const longitude = position.coords.longitude; // 위도
-//   const coordsObj = {
-//     latitude,
-//     longitude,
-//   };
-//   saveCoords(coordsObj);
-//   getWeather(latitude, longitude);
-// }
-
-// function handleGeoErr(err) {
-//   console.log("geo err! " + err);
-// }
-
-// function requestCoords() {
-//   navigator.geolocation.getCurrentPosition(handleGeoSucc, handleGeoErr);
-// }
-
-// requestCoords();
-
-// const weather = document.querySelector(".weather");
-// const API_KEY = "f8d4a48d6bd796048c19751bc6d022a6";
-
-// function getWeather(lat, lon) {
-//   fetch(
-//     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-//   )
-//     .then((res) => res.json())
-//     .then((data) => {
-//       const temp = data.main.temp;
-//       const weathers = data.weather[data.weather.length - 1];
-
-//       // weatherIcon 요소 생성 및 설정
-//       const weatherIcon = document.createElement("img");
-//       weatherIcon.src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
-
-//       // weatherSpan 요소 생성 및 설정
-//       const weatherSpan = document.createElement("span");
-//       weatherSpan.innerHTML = `${temp}&#176;C ${weathers.main}`;
-
-//       // weather 요소에 weatherIcon과 weatherSpan 추가
-//       weather.innerHTML = ""; // 기존 내용 초기화
-//       weather.appendChild(weatherIcon);
-//       weather.appendChild(weatherSpan);
-//     });
-// }
-
-// function handleGeoSucc(position) {
-//   const latitude = position.coords.latitude; // 경도
-//   const longitude = position.coords.longitude; // 위도
-//   const coordsObj = {
-//     latitude,
-//     longitude,
-//   };
-//   saveCoords(coordsObj);
-//   getWeather(latitude, longitude);
-// }
-
-// function handleGeoErr(err) {
-//   console.log("geo err! " + err);
-// }
-
-// function requestCoords() {
-//   navigator.geolocation.getCurrentPosition(handleGeoSucc, handleGeoErr); //현재위치
-// }
-
-// requestCoords();
-
-const API_KEY = "15f8fbf5168d6da001f1e3c2c4b76277";
-// const API_KEY = "f8d4a48d6bd796048c19751bc6d022a6";
-const city = document.querySelector(".weather tbody td:first-child");
-const weather = document.querySelector(".weather tbody td:nth-child(2)");
-const temp = document.querySelector(".weather tbody td:nth-child(3)");
+const city = document.querySelector(".city");
+const temp = document.querySelector(".temperature");
+const weather = document.querySelector(".weather");
 const iconSection = document.querySelector(".icon");
 
 const callbackOk = (position) => {
   const lat = position.coords.latitude; //위도
   const lon = position.coords.longitude; //경도
-  const lang = "kr"; //언어
+  const lang = "en"; //언어
   const units = "metric"; //섭씨
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=${lang}&units=${units}&appid=${API_KEY}`;
 
@@ -244,12 +158,12 @@ const callbackOk = (position) => {
     .then((response) => response.json())
     .then((data) => {
       const temperature = Math.round(data.main.temp);
-      const humidity = Math.round(data.main.humi);
+      const weathers = data.weather[data.weather.length - 1];
       const icon = data.weather[0].icon;
       const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
       city.innerText = data.name;
-      weather.innerText = data.weather[0].description;
-      temp.innerText = `${temperature}도`;
+      temp.innerHTML = `${temperature}&#176;C`;
+      weather.innerHTML = `${weathers.main}`;
       iconSection.setAttribute("src", iconURL);
     });
 };
