@@ -1,0 +1,103 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+//배경
+img {
+  z-index: -1;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1090px;
+  width: 100%;
+  height: auto; /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  // 시계
+  .clock {
+    #time{
+      font-size: 6rem;
+      color: whitesmoke;
+    }
+  }
+
+  // 인사
+  .greet{
+
+    .hidden {
+    display: none;
+    }
+    
+    #input-name {
+      input {
+        color: whitesmoke;
+        font-size: 2rem;
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        outline: none;
+        text-align: center;
+        background: transparent;
+      }
+
+      input::placeholder {
+        color: whitesmoke;
+      }
+    }
+
+    .greetings{
+      display: flex;
+
+      #greeting{
+        margin-right: 1rem;
+        color: whitesmoke;
+      }
+
+      #ellipsis-form{
+
+        input {
+          display: none;
+        }
+        
+        label i {
+          width: 1rem;
+          height: 1rem;
+          // border-radius: 25px;
+          // line-height: 30px;
+          transition: all ease 0.8s;
+          color: whitesmoke;
+          margin-right: .5rem;
+        }
+
+        label i:hover {
+          cursor: pointer;
+          transform: scale(1.2) ;
+        }
+      }
+
+      #renameBtn{
+        input {
+          background: transparent;
+          border: 1px solid whitesmoke;
+          border-radius: .5rem;
+          padding: .2rem .2rem;
+          color: whitesmoke;
+          font-size: 1rem;
+        }
+      }
+    }
+
+  }
+} 

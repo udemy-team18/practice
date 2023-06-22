@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #greeting {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    #name-input, #save-button {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="greeting"></div>
+  <input type="text" id="name-input" placeholder="이름을 입력하세요">
+  <button id="save-button" onclick="saveName()">저장</button>
+  <button id="edit-button" onclick="editName()">수정</button>
+
+  <script>
+    let name = "";
+
+    if (name) {
+      showGreeting();
+    } else {
+      showNameInput();
+    }
+
+    function saveName() {
+      name = document.getElementById("name-input").value;
+      localStorage.setItem("name", name);
+      showGreeting();
+    }
+
+    function editName() {
+      showNameInput();
+    }
+
+    function showGreeting() {
+      document.getElementById("greeting").innerHTML = getGreeting() + " " + name + "님!";
+      document.getElementById("name-input").style.display = "none";
+      document.getElementById("save-button").style.display = "none";
+      document.getElementById("edit-button").style.display = "inline";
+    }
+
+    function showNameInput() {
+      document.getElementById("greeting").innerHTML = "";
+      document.getElementById("name-input").style.display = "inline";
+      document.getElementById("save-button").style.display = "inline";
+      document.getElementById("edit-button").style.display = "none";
+    }
+
+    function getGreeting() {
+      let hour = new Date().getHours();
+      let greeting = "";
+      
+      if (hour >= 6 && hour < 12) {
+        greeting = "Good morning";
+      } else if (hour >= 12 && hour < 17) {
+        greeting = "Good afternoon";
+      } else if (hour >= 17 && hour < 20) {
+        greeting = "Good evening";
+      } else {
+        greeting = "Good night";
+      }
+      
+      return greeting;
+    }
+  </script>
+</body>
+</html>
