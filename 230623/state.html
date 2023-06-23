@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>using state</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.querySelector("#root");
+      function App() {
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+          setCounter((counter) => counter + 1);
+        };
+        return (
+          <>
+            <h1>Total Clicks : {counter}</h1>
+            <button onClick={onClick}>Click!</button>
+          </>
+        );
+      }
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>
