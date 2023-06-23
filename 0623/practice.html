@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function Btn({ text, backgroundColor, fontSize }) {
+        return (
+          <button
+            style={{
+              backgroundColor: backgroundColor,
+              color: "white",
+              fontSize: fontSize,
+              border: 0,
+            }}
+          >
+            {text}
+          </button>
+        );
+      }
+      function User({ name, work }) {
+        return (
+          <div>
+            <h2>이름:{name}</h2>
+            <p>{work}하는 사람</p>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <>
+            <Btn backgroundColor="red" text="hi" fontSize={20} />
+            <Btn backgroundColor="blue" text="hello" fontSize={20} />
+            <User name="yunie" work="react" />
+          </>
+        );
+      }
+
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>

@@ -2,11 +2,10 @@
 function backImg() {
   const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
   const chosenImage = images[Math.floor(Math.random() * images.length)];
+  const backgroundImg = document.querySelector(".backgroundImg");
   const bgImage = document.createElement("img");
-
   bgImage.src = `images/${chosenImage}`;
-
-  document.body.appendChild(bgImage);
+  backgroundImg.appendChild(bgImage);
 }
 backImg();
 
@@ -141,35 +140,42 @@ todo();
 
 //날씨
 import API_KEY from "./api.js";
+function weathers() {
+  console.log(API_KEY);
 
-const city = document.querySelector(".city");
-const temp = document.querySelector(".temperature");
-const weather = document.querySelector(".weather");
-const iconSection = document.querySelector(".icon");
+  const city = document.querySelector(".city");
+  const temp = document.querySelector(".temperature");
+  const weather = document.querySelector(".weather");
+  const iconSection = document.querySelector(".icon");
 
-const callbackOk = (position) => {
-  const lat = position.coords.latitude; //위도
-  const lon = position.coords.longitude; //경도
-  const lang = "en"; //언어
-  const units = "metric"; //섭씨
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=${lang}&units=${units}&appid=${API_KEY}`;
+  const callbackOk = (position) => {
+    const lat = position.coords.latitude; //위도
+    const lon = position.coords.longitude; //경도
+    const lang = "en"; //언어
+    const units = "metric"; //섭씨
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=${lang}&units=${units}&appid=${API_KEY}`;
+    console.log(url);
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(lat, lon);
+        console.log(data.main.temp);
+        const temperature = Math.round(data.main.temp);
+        // const temperature = data.main.temp ? Math.round(data.main.temp) : "no";
+        const weathers = data.weather[data.weather.length - 1];
+        const icon = data.weather[0].icon;
+        const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+        city.innerText = data.name;
+        temp.innerHTML = `${temperature}&#176;C`;
+        weather.innerHTML = `${weathers.main}`;
+        iconSection.setAttribute("src", iconURL);
+      });
+  };
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const temperature = Math.round(data.main.temp);
-      const weathers = data.weather[data.weather.length - 1];
-      const icon = data.weather[0].icon;
-      const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-      city.innerText = data.name;
-      temp.innerHTML = `${temperature}&#176;C`;
-      weather.innerHTML = `${weathers.main}`;
-      iconSection.setAttribute("src", iconURL);
-    });
-};
+  const callbackError = () => {
+    alert("위치정보를 찾을 수 없습니다.");
+  };
 
-const callbackError = () => {
-  alert("위치정보를 찾을 수 없습니다.");
-};
-
-navigator.geolocation.getCurrentPosition(callbackOk, callbackError); //현재 위치
+  navigator.geolocation.getCurrentPosition(callbackOk, callbackError); //현재 위치
+}
+weathers();

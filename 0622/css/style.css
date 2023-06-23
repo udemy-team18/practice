@@ -5,7 +5,7 @@
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
-img {
+.backgroundImg img {
   z-index: -1;
   /* Set rules to fill background */
   min-height: 100%;
@@ -129,4 +129,8 @@ main .weathers {
 main .weathers .temperature {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+main .weathers .icon {
+  width: 2.5rem;
+  height: 2.5rem;
 }
