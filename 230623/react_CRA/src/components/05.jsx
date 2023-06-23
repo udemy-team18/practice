@@ -22,13 +22,13 @@ function Practice05() {
     { id: 4, text: "works that have to be done" },
     { id: 5, text: "works that have to be done" },
   ];
-  const anotherToDos = [
-    { id: 5, text: "works that have to be done" },
-    { id: 6, text: "works that have to be done" },
-    { id: 7, text: "works that have to be done" },
-    { id: 8, text: "works that have to be done" },
-    { id: 9, text: "works that have to be done" },
-  ];
+  //   const anotherToDos = [
+  //     { id: 5, text: "works that have to be done" },
+  //     { id: 6, text: "works that have to be done" },
+  //     { id: 7, text: "works that have to be done" },
+  //     { id: 8, text: "works that have to be done" },
+  //     { id: 9, text: "works that have to be done" },
+  //   ];
   return <ToDoList toDos={toDos} />;
 }
 
