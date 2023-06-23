@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/pill.png" type="image/x-icon" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      let a = 0;
+      const root = document.querySelector("#root");
+      const Title = () => (
+        <h1
+          id="h1"
+          style={{ color: "red" }}
+          onMouseEnter={() => console.log("hover")}
+        >
+          Total Clicks : 0
+        </h1>
+      );
+      const Button = () => (
+        <button
+          onClick={() => {
+            a = a + 1;
+            console.log(a);
+          }}
+        >
+          button
+        </button>
+      );
+      const Container = () => (
+        <div>
+          <Title />
+          <Button />
+        </div>
+      );
+      ReactDOM.render(<Container />, root);
+    </script>
+  </body>
+</html>
