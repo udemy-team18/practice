@@ -1,7 +1,22 @@
 import React, { useState } from "react";
 
+const WriteTodo = (props) => {
+  console.log(props);
+  const todoList = props.todoList;
+  return (
+    <ul>
+      {todoList.map((item) => (
+        <li>
+          {item.id} {item.text}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 const Todo = () => {
-    const [todoList, setTodoList] = useState([])
+  const arr = new Array(10);
+  const [todoList, setTodoList] = useState({ arr });
   return (
     <div>
       <h1>todo list</h1>
@@ -10,8 +25,7 @@ const Todo = () => {
         <input type="text" id="todo" value={undefined} />
         <button type="submit">add</button>
       </form>
-      <ul>
-      </ul>
+      <WriteTodo todoList={todoList} />
     </div>
   );
 };
