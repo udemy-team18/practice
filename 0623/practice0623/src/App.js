@@ -1,14 +1,14 @@
-import Practice01 from "./components/practice1";
-import Practice02 from "./components/practice2";
-import Practice03 from "./components/practice3";
+import Todo from "./components/TodoList";
+import Random from "./components/Random";
+import Slider from "./components/Slider";
 
 function App() {
   return (
-    <div>
-      <Practice01 />
-      <Practice02 />
-      <Practice03 />
-    </div>
+    <>
+      <Todo />
+      <Random min={1} max={100} />
+      <Slider />
+    </>
   );
 }
 
