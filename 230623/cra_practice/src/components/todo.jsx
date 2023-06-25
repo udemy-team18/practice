@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 
 const WriteTodo = (props) => {
-  console.log(props);
   const todoList = props.todoList;
   return (
     <ul>
-      {todoList.map((item) => (
-        <li>
-          {item.id} {item.text}
-        </li>
+      {todoList.map((item, index) => (
+        <li key={index}>{item}</li>
       ))}
     </ul>
   );
 };
 
 const Todo = () => {
-  const arr = new Array(10);
-  const [todoList, setTodoList] = useState({ arr });
+  const arr = Array.from({ length: 5 }, (v, i) => {
+    return i;
+  });
+  const [todoList, setTodoList] = useState(arr);
   return (
     <div>
       <h1>todo list</h1>
