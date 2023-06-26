@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: aliceblue;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  gap: 3rem;
+  padding-left: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #f59000;
+}
