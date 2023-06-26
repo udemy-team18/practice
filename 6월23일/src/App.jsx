@@ -12,7 +12,7 @@ function App() {
   const [random, setRandom] = useState('');
   const [min, setMin] = useState('');
   const [max, setMax] = useState('');
-  const [imgList, setImgList] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const info1 = useRef();
   const info2 = useRef();
@@ -60,12 +60,26 @@ function App() {
   }
 
   const images = [img1, img2, img3];
-  const imgNum = images.length;
-  const beforeImg = images[imgNum - 1];
-  const afterImg = images[0];
 
-  const prevButton = () => {};
-  const nextButton = () => {};
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === 0) {
+        return images.length - 1;
+      } else {
+        return prevIndex - 1;
+      }
+    });
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => {
+      if (prevIndex === images.length - 1) {
+        return 0;
+      } else {
+        return prevIndex + 1;
+      }
+    });
+  };
 
   return (
     <>
@@ -119,9 +133,13 @@ function App() {
 
       <div>
         <h1>슬라이드이미지</h1>
-        <button onClick={prevButton}>🔙</button>
-        <img src='' alt='' />
-        <button onClick={nextButton}>🔜</button>
+        <button onClick={prevImage}>이전</button>
+        <img
+          src={images[currentImageIndex]}
+          alt='Slider'
+          style={{ width: '300px' }}
+        />
+        <button onClick={nextImage}>다음</button>
       </div>
     </>
   );
