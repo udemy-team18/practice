@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const ProfileData = {
+const profileData = {
   ASJ: {
     id: 1,
     name: "안승지",
@@ -17,12 +17,20 @@ const ProfileData = {
 const Profile = () => {
   const { username } = useParams();
   const navigate = useNavigate();
-  console.log(username);
-  console.log(useParams());
-  console.log(useNavigate());
-  return <div>
-    <h3>{username}</h3>
-  </div>;
+  const profile = profileData[username];
+
+  if (!profile) {
+    return <div>존재하지 않는 유저입니다.</div>;
+  }
+  return (
+    <div>
+      <h3>
+        {username}({profile.name})
+      </h3>
+      <p>{profile.desc}</p>
+      <div onClick={()=>{navigate(-1)}}>뒤로가기</div>
+    </div>
+  );
 };
 
 export default Profile;

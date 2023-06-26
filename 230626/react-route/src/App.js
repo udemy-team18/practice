@@ -6,6 +6,7 @@ import Footer from "components/Footer";
 import Home from "pages/Home";
 import About from "pages/About";
 import Profile from "pages/Profile";
+import SearchResults from "pages/SearchResult"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profiles/:username" element={<Profile />} />
+        <Route path="/search" element={<SearchResults />} />
       </Routes>
       <Footer />
     </Router>
