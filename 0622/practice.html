@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0622</title>
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/5e5138dc02.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="api.js" defer></script>
+  </head>
+  <body>
+    <!-- 배경 -->
+    <div class="backgroundImg"></div>
+    <main>
+      <!-- 시계 -->
+      <div class="clock">
+        <h1 id="time"></h1>
+      </div>
+
+      <!-- 인사 -->
+      <div class="greet">
+        <form class="hidden" id="input-name">
+          <input
+            required
+            maxlength="20"
+            type="text"
+            placeholder="What is your name?"
+          />
+        </form>
+
+        <div class="greetings">
+          <h1 class="hidden" id="greeting"></h1>
+
+          <!-- 숨김 -->
+          <form class="hidden" id="ellipsis-form">
+            <input type="button" id="ellipsis" />
+            <label for="ellipsis"><i class="fas fa-edit"></i></label>
+          </form>
+          <form class="hidden" id="renameBtn">
+            <input type="submit" value="rename" />
+          </form>
+        </div>
+      </div>
+
+      <!-- todolist -->
+      <div class="todo">
+        <input
+          required
+          type="text"
+          id="todo"
+          placeholder="What is your plan?"
+        />
+        <ul id="todoList"></ul>
+      </div>
+
+      <!-- 날씨 -->
+      <div class="weathers">
+        <div class="city"></div>
+        <div class="temperature"></div>
+        <div class="weather"></div>
+        <img class="icon" />
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.container-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-cart header {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: rgb(234, 232, 232);
+  padding: 1rem 8rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.container-cart .fruits {
+  display: flex;
+}
+.container-cart .fruits .fruits-box-1 {
+  background-color: rgb(243, 157, 157);
+  margin-right: 2rem;
+}
+.container-cart .fruits .fruits-box-2 {
+  background-color: rgb(239, 239, 160);
+}
+.container-cart .fruits .fruits-box-1, .container-cart .fruits .fruits-box-2 {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-cart .fruits .fruits-box-1 .button, .container-cart .fruits .fruits-box-2 .button {
+  padding: 0.1rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: white;
+}
+.container-cart .list h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.container-cart .list #fruits-list {
+  display: flex;
+  flex-direction: column;
+}
+.container-cart .list #fruits-list li {
+  list-style: none;
+}
+
+.container-chat {
+  margin-bottom: 6rem;
+}
+.container-chat .chat {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: rgb(234, 232, 232);
+  padding: 1rem 8rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 6rem;
+}
+.container-chat .wrapper-chat {
+  margin-left: 1rem;
+}
+.container-chat #chatPage #userName {
+  font-weight: 700;
+}
+.container-chat #chatPage li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.container-chat input {
+  font-size: 1.5rem;
+}
+.container-chat button {
+  background-color: rgb(248, 162, 130);
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.container-todoList {
+  margin-bottom: 6rem;
+}
+.container-todoList header {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: rgb(234, 232, 232);
+  padding: 1rem 8rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.container-todoList .wrapper-todoList {
+  margin-left: 2rem;
+}
+.container-todoList .wrapper-todoList input, .container-todoList .wrapper-todoList li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+.container-todoList .wrapper-todoList button {
+  background-color: rgb(248, 162, 130);
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}

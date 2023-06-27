@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body> 
+  <h1>My first web page</h1>
+  <p id="demo"></p>
+  <p id="demo1"></p>
+  <p id="person"></p>
+  <script>
+    // document.getElementById("demo").innerHTML = 5+6;
+    console.log(5+6);
+
+    let length = 16;
+    let weigth = 7.5;
+    let color = "red";
+    let x = true;
+    let y = false;
+    const Person = {firstName : "john", lastName : "Doe"};
+    const cars = ["saab", "volvo", "bmw"];
+    const date = new Date("2023.06.16");
+
+    const demo = document.getElementById("demo");
+    function myFunction(p1, p2){
+      return p1 * p2;
+    }
+    console.log(myFunction(3,4));
+    let value = myFunction(3,4);
+    demo.innerHTML = value;
+
+    const person = {
+      firstName : 'Yunie',
+      lastName : 'Kim',
+      eyeColor : 'black',
+      hairColor : 'black',
+      phone : 'iphone',
+      fullName : function(){
+        return this.firstName +" "+ this.lastName;
+      }
+    };
+    console.log(person.fullName());
+
+    const me = document.getElementById("person");
+    me.innerHTML = person.phone;
+
+    let text = "abcdefghijklmn";
+    let text2 = "hi";
+    console.log(text.length);
+    console.log(text.slice(2,5));
+    console.log(text.replace("abcd", "microsoft"));
+    console.log(text.toUpperCase());
+    console.log(text.concat(text2));
+
+    const fruits = ['banana', 'orange'];
+    document.getElementById("demo1").innerHTML = fruits.toString();
+
+    const ironMan = {
+      name : '토니스타크',
+      actor : '로다주'
+    }
+
+    const {name, actor} = ironMan;
+    const onChange = (event) => {
+      const {target:{value}} = event;
+      console.log(value);
+    }
+  </script>
+</body>
+</html>

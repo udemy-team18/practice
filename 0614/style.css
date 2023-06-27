@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-menu{
+  display: flex;
+  list-style: none;
+}
+
+.navbar-menu li {
+  padding: 1.5rem 1.5rem;
+}
+
+.navbar-menu li:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.navbar-toggle{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 1.5 rem;
+  font-size: 24px;
+  color: blue;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12rem .5rem;
+}
+
+.container .box {
+  width: 30rem;
+  height: 20rem;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter : brightness(0.75);
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.container .box img:hover {
+  filter : brightness(1);
+  transform: scale(1.05);
+}
+
+.container .box .text {
+  padding-top: .75rem;
+}
+
+.container .box .text p{
+  font-size: 1.3rem;
+  color: gray;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.container .box button{
+  font-size: 1.5rem;
+  padding: .75rem;
+  border: #3B82F6;
+  border-radius: 15px;
+  color: white;
+  background-color: #3B82F6;
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-menu, .navbar-login{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-menu li, .navbar-login{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .navbar-login {
+    display: none;
+  }
+
+  .navbar-toggle{
+    display: block;
+  }
+
+  .navbar-menu.active, 
+  .navbar-login.active{
+    display: flex;
+  }
+}
