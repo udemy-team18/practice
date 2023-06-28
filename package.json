@@ -7,7 +7,14 @@
   "description": "- 이정권 : leg1770@naver.com\r - 황예지 : yejipooh@gmail.com\r - 김유은 : yueunkim0605@gmail.com\r - 안승지 : ansj8777@gmail.com",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
