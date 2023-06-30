@@ -30,3 +30,5 @@ io.on("connection", (socket) => {
 server.listen(3001, () => {
   console.log("서버가 3001 포트에서 실행 중입니다.");
 });
+
+console.log();
