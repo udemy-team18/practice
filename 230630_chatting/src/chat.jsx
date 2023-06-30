@@ -23,7 +23,8 @@ function Chat() {
     setMessage((prevMessage) => [...prevMessage, message]);
   };
 
-  const handleMessageSubmit = () => {
+  const handleMessageSubmit = (e) => {
+    e.preventDefault();
     if (inputValue.trim() !== "") {
       const currTime = new Date().toLocaleTimeString();
       socket.emit("message", {
@@ -35,9 +36,9 @@ function Chat() {
     }
   };
 
-  const prevD = (e) => {
-    e.preventDefault();
-  };
+  // const prevD = (e) => {
+  //   e.preventDefault();
+  // };
 
   return (
     <div>
@@ -50,7 +51,7 @@ function Chat() {
         ))}
       </div>
       <h1>input</h1>
-      <form onSubmit={prevD}>
+      <form onSubmit={handleMessageSubmit}>
         <input
           type="text"
           value={userName}
@@ -64,9 +65,7 @@ function Chat() {
             setInputValue(e.target.value);
           }}
         />
-        <button type="submit" onClick={handleMessageSubmit}>
-          send
-        </button>
+        <button type="submit">send</button>
       </form>
     </div>
   );
