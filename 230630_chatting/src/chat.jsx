@@ -45,7 +45,7 @@ function Chat() {
       <div>
         {message.map((message, index) => (
           <p key={index}>
-            {message.name} : {message.content} - {message.time}
+            {message.userName} : {message.content} - {message.time}
           </p>
         ))}
       </div>
