@@ -26,16 +26,35 @@
 // export default App;
 
 //0628수업
-import Counter from "./components/counter";
-import LoginForm from "./components/loginForm";
-import UseCount from "./components/usecount";
+// import Counter from "./components/counter";
+// import LoginForm from "./components/loginForm";
+// import UseCount from "./components/usecount";
 
+// function App() {
+//   return (
+//     <div className="App">
+//       {/* <Counter />
+//       <UseCount /> */}
+//       <LoginForm />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//0630
+import Timer from "components/timer";
+import Counter from "./components/count";
+import Reducer from "components/countReducer";
+import ToggleTheme from "components/toggleTheme";
 function App() {
   return (
-    <div className="App">
-      {/* <Counter />
-      <UseCount /> */}
-      <LoginForm />
+    <div>
+      <h1>components lifecycle 이해</h1>
+      <Counter />
+      <Timer />
+      <Reducer />
+      <ToggleTheme />
     </div>
   );
 }
