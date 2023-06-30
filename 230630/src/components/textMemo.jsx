@@ -9,9 +9,10 @@ export default function TextMemo() {
   const handleTextChange = (event) => {
     setText(event.target.value);
   };
-  return(
+  return (
     <div>
-        
+      <textarea value={text} onChange={handleTextChange} />
+      <p>Character Count: {charCount}</p>
     </div>
-  )
+  );
 }
