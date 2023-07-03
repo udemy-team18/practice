@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from "react";
 
-const initialState = 0;
+const initialState = [];
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
   }
 };
 
-export default function Todo() {
+export default function TodoList() {
   const [todos, dispatch] = useReducer(reducer, initialState);
   const [input, setInput] = useState("");
 
@@ -28,11 +28,16 @@ export default function Todo() {
     }
   };
   const deleteTodo = (id) => {
-    dispatch({ type: "deleteTodo", payload: id });
+    dispatch({ type: "delete", payload: id });
   };
+
+  const preventD = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div>
-      <form onSubmit={undefined}>
+      <form onSubmit={preventD}>
         <label htmlFor="todo">works to do</label>
         <input
           type="text"
@@ -45,12 +50,12 @@ export default function Todo() {
         />
         <button onClick={addTodo}>add to do</button>
         <ul>
-          {todos.map((todo) => {
-            <li key={todos.id}>
-              {todos.text}
+          {todos.map((todo) => (
+            <li key={todo.id}>
+              {todo.text}
               <button onClick={() => deleteTodo(todo.id)}>❌</button>
-            </li>;
-          })}
+            </li>
+          ))}
         </ul>
       </form>
     </div>
