@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: "airbnb",
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   overrides: [
     {
       env: {
@@ -15,9 +15,11 @@ module.exports = {
       },
     },
   ],
+  parser: "eslint-html-parser",
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 2020,
     sourceType: "module",
   },
+  plugins: ["react"],
   rules: {},
 };
