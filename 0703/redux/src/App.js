@@ -8,8 +8,8 @@ function App() {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.CounterSlice.count);
   const auth = useSelector((state) => state.AuthSlice.auth);
-  const todos = useSelector((state) => state.todos);
-  const cartItems = useSelector((state) => state.cart);
+  const todos = useSelector((state) => state.TodosSlice.todos);
+  const cartItems = useSelector((state) => state.CartSlice.cart);
 
   //todo
   const handleAddTodo = (text) => {
