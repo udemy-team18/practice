@@ -6,10 +6,10 @@ import { useSelector, useDispatch } from "react-redux";
 
 function App() {
   const dispatch = useDispatch();
-  const count = useSelector((state) => state.CounterSlice.count);
-  const auth = useSelector((state) => state.AuthSlice.auth);
-  const todos = useSelector((state) => state.TodosSlice.todos);
-  const cartItems = useSelector((state) => state.CartSlice.cart);
+  const count = useSelector((state) => state.counterSlice.count);
+  const auth = useSelector((state) => state.authSlice.auth);
+  const todos = useSelector((state) => state.todosSlice.todos);
+  const cartItems = useSelector((state) => state.cartSlice.cart);
 
   //todo
   const handleAddTodo = (text) => {
